@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DMBlock.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"");
-    // Do any additional setup after loading the view, typically from a nib.
+//    [[DMBlock new] dm_methodA];
+//    [[DMBlock new] dm_methodB];
+//    [[DMBlock new] dm_methodC];
+//    [[DMBlock new] dm_methodD];
+//    [[DMBlock new] dm_methodE];
+//    [[DMBlock new] dm_methodF];
+    [[DMBlock new] dm_methodG];
 }
 
 
