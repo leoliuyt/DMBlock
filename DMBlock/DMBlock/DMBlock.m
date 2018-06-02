@@ -85,6 +85,7 @@ static int static_global_var = 5;
     multipler = 4;
     int result = Block(2);//10
     NSLog(@"%d",result);
+    NSLog(@"%@", Block);
 }
 
 - (void)dm_methodB{
@@ -160,6 +161,66 @@ static int static_global_var = 5;
     
     self.copyBlock = Block;
 }
+
+- (void)dm_methodH
+{
+    //编译报错
+//    const char text[] = "hello";
+    const char *text = "hello";
+    void(^Block)(void) = ^{
+        printf("%c\n",text[2]);
+    };
+    Block();
+}
+
+- (void)dm_methodI
+{
+    id obj = [self getBlockArray];
+    typedef void(^blk_t)(void);
+    blk_t blk = (blk_t)[obj objectAtIndex:0];
+    blk();
+}
+
+- (void)dm_methodJ
+{
+    __block int val = 0;
+    void(^blk)(void) = [^{++val;} copy];
+    ++val;
+    blk();
+    NSLog(@"%tu",val);//2
+}
+
+- (void)dm_methodK
+{
+    typedef void(^blk_t)(id obj);
+    blk_t  blk;
+    {
+        id array1 = [[NSMutableArray alloc] init];
+        __weak __block id array = array1; //与 __weak id array = array1;效果相同
+        blk = [^(id obj){
+            [array addObject:obj];
+            NSLog(@"array count = %tu",[array count]);
+        } copy];
+    }
+    
+    blk([[NSObject alloc] init]);
+    blk([[NSObject alloc] init]);
+    blk([[NSObject alloc] init]);
+    /*
+     array count = 0
+     array count = 0
+     array count = 0
+     */
+}
+
+- (id)getBlockArray
+{
+    int val = 10;
+    return [[NSArray alloc] initWithObjects:
+            ^{NSLog(@"block0:%tu",val);},
+            ^{NSLog(@"block1:%tu",val);}, nil];
+}
+
 
 - (void)dealloc
 {

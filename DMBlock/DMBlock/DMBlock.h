@@ -16,5 +16,9 @@
 - (void)dm_methodE;
 - (void)dm_methodF;
 - (void)dm_methodG;
+- (void)dm_methodH;
+- (void)dm_methodI;
+- (void)dm_methodJ;
+- (void)dm_methodK;
 
 @end

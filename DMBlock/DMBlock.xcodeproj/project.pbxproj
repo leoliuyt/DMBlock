@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BA6C02420C24BF100E0A581 /* DMBlock3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA6C02320C24BF100E0A581 /* DMBlock3.m */; };
+		6BA6C02920C26A4100E0A581 /* Block4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA6C02820C26A4100E0A581 /* Block4.m */; };
+		6BA6C02D20C2971800E0A581 /* DMBlock5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA6C02C20C2971800E0A581 /* DMBlock5.m */; };
 		9E62597420B2FEAF00C76C18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E62597320B2FEAF00C76C18 /* AppDelegate.m */; };
 		9E62597720B2FEAF00C76C18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E62597620B2FEAF00C76C18 /* ViewController.m */; };
 		9E62597A20B2FEAF00C76C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E62597820B2FEAF00C76C18 /* Main.storyboard */; };
@@ -19,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BA6C02220C24BF100E0A581 /* DMBlock3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMBlock3.h; sourceTree = "<group>"; };
+		6BA6C02320C24BF100E0A581 /* DMBlock3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBlock3.m; sourceTree = "<group>"; };
+		6BA6C02520C24CC600E0A581 /* DMBlock3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DMBlock3.cpp; sourceTree = "<group>"; };
+		6BA6C02720C26A4100E0A581 /* Block4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block4.h; sourceTree = "<group>"; };
+		6BA6C02820C26A4100E0A581 /* Block4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Block4.m; sourceTree = "<group>"; };
+		6BA6C02A20C26AE100E0A581 /* Block4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Block4.cpp; sourceTree = "<group>"; };
+		6BA6C02B20C2971800E0A581 /* DMBlock5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMBlock5.h; sourceTree = "<group>"; };
+		6BA6C02C20C2971800E0A581 /* DMBlock5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMBlock5.m; sourceTree = "<group>"; };
+		6BA6C02E20C298BF00E0A581 /* DMBlock5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DMBlock5.cpp; sourceTree = "<group>"; };
 		9E62596F20B2FEAF00C76C18 /* DMBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E62597220B2FEAF00C76C18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E62597320B2FEAF00C76C18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +92,15 @@
 				9EE5A80320B7EAFF00FBF871 /* DMBlock1.m */,
 				9EE5A82720B7FCAB00FBF871 /* DMBlock2.h */,
 				9EE5A82820B7FCAB00FBF871 /* DMBlock2.m */,
+				6BA6C02220C24BF100E0A581 /* DMBlock3.h */,
+				6BA6C02320C24BF100E0A581 /* DMBlock3.m */,
+				6BA6C02720C26A4100E0A581 /* Block4.h */,
+				6BA6C02820C26A4100E0A581 /* Block4.m */,
+				6BA6C02B20C2971800E0A581 /* DMBlock5.h */,
+				6BA6C02C20C2971800E0A581 /* DMBlock5.m */,
+				6BA6C02E20C298BF00E0A581 /* DMBlock5.cpp */,
+				6BA6C02A20C26AE100E0A581 /* Block4.cpp */,
+				6BA6C02520C24CC600E0A581 /* DMBlock3.cpp */,
 				9EE5A82A20B7FD3600FBF871 /* DMBlock2.cpp */,
 				9EE5A80520B7EDA500FBF871 /* DMBlock1.cpp */,
 				9E62598B20B300F800C76C18 /* DMBlock.cpp */,
@@ -164,10 +185,13 @@
 			files = (
 				9EE5A82920B7FCAB00FBF871 /* DMBlock2.m in Sources */,
 				9E62598A20B2FFBF00C76C18 /* DMBlock.m in Sources */,
+				6BA6C02920C26A4100E0A581 /* Block4.m in Sources */,
 				9E62597720B2FEAF00C76C18 /* ViewController.m in Sources */,
 				9EE5A80420B7EAFF00FBF871 /* DMBlock1.m in Sources */,
 				9E62598220B2FEB200C76C18 /* main.m in Sources */,
+				6BA6C02420C24BF100E0A581 /* DMBlock3.m in Sources */,
 				9E62597420B2FEAF00C76C18 /* AppDelegate.m in Sources */,
+				6BA6C02D20C2971800E0A581 /* DMBlock5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +332,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XWNPFKK4U5;
 				INFOPLIST_FILE = DMBlock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +350,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XWNPFKK4U5;
 				INFOPLIST_FILE = DMBlock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

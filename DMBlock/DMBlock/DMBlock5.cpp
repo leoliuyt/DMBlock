@@ -106,7 +106,6 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_6__qmlfhwd97q1dy9pv8qpqrkth0000gn_T_DMBlock1_56af0a_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"my block",8};
 
 
 
@@ -97781,48 +97780,47 @@ typedef void (*NSUserAutomatorTaskCompletionHandler)(id _Nullable result, NSErro
 
 
 
-#ifndef _REWRITER_typedef_DMBlock1
-#define _REWRITER_typedef_DMBlock1
-typedef struct objc_object DMBlock1;
-typedef struct {} _objc_exc_DMBlock1;
+#ifndef _REWRITER_typedef_DMBlock5
+#define _REWRITER_typedef_DMBlock5
+typedef struct objc_object DMBlock5;
+typedef struct {} _objc_exc_DMBlock5;
 #endif
 
-struct DMBlock1_IMPL {
+struct DMBlock5_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 };
 
 
 /* @end */
 
+typedef int (*blk_t)(int);
+// @implementation DMBlock5
 
-// @implementation DMBlock1
 
-
-struct __DMBlock1__dm_method_block_impl_0 {
+struct __func_block_impl_0 {
   struct __block_impl impl;
-  struct __DMBlock1__dm_method_block_desc_0* Desc;
-  __DMBlock1__dm_method_block_impl_0(void *fp, struct __DMBlock1__dm_method_block_desc_0 *desc, int flags=0) {
+  struct __func_block_desc_0* Desc;
+  int rate;
+  __func_block_impl_0(void *fp, struct __func_block_desc_0 *desc, int _rate, int flags=0) : rate(_rate) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
 };
-static void __DMBlock1__dm_method_block_func_0(struct __DMBlock1__dm_method_block_impl_0 *__cself) {
+static int __func_block_func_0(struct __func_block_impl_0 *__cself, int count) {
+  int rate = __cself->rate; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_6__qmlfhwd97q1dy9pv8qpqrkth0000gn_T_DMBlock1_56af0a_mi_0);
+        return rate * count;
     }
 
-static struct __DMBlock1__dm_method_block_desc_0 {
+static struct __func_block_desc_0 {
   size_t reserved;
   size_t Block_size;
-} __DMBlock1__dm_method_block_desc_0_DATA = { 0, sizeof(struct __DMBlock1__dm_method_block_impl_0)};
-
-static void _I_DMBlock1_dm_method(DMBlock1 * self, SEL _cmd) {
-    //定义
-    void(*MyBlock)(void) = ((void (*)())&__DMBlock1__dm_method_block_impl_0((void *)__DMBlock1__dm_method_block_func_0, &__DMBlock1__dm_method_block_desc_0_DATA));
-    //调用
-    ((void (*)(__block_impl *))((__block_impl *)MyBlock)->FuncPtr)((__block_impl *)MyBlock);
+} __func_block_desc_0_DATA = { 0, sizeof(struct __func_block_impl_0)};
+blk_t func(int rate){
+    blk_t bk = ((int (*)(int))&__func_block_impl_0((void *)__func_block_func_0, &__func_block_desc_0_DATA, rate));
+    return bk;
 }
 // @end
 
@@ -97894,21 +97892,11 @@ struct _category_t {
 extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
 
-static struct /*_method_list_t*/ {
-	unsigned int entsize;  // sizeof(struct _objc_method)
-	unsigned int method_count;
-	struct _objc_method method_list[1];
-} _OBJC_$_INSTANCE_METHODS_DMBlock1 __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	sizeof(_objc_method),
-	1,
-	{{(struct objc_selector *)"dm_method", "v16@0:8", (void *)_I_DMBlock1_dm_method}}
-};
-
-static struct _class_ro_t _OBJC_METACLASS_RO_$_DMBlock1 __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+static struct _class_ro_t _OBJC_METACLASS_RO_$_DMBlock5 __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	1, sizeof(struct _class_t), sizeof(struct _class_t), 
 	(unsigned int)0, 
 	0, 
-	"DMBlock1",
+	"DMBlock5",
 	0, 
 	0, 
 	0, 
@@ -97916,12 +97904,12 @@ static struct _class_ro_t _OBJC_METACLASS_RO_$_DMBlock1 __attribute__ ((used, se
 	0, 
 };
 
-static struct _class_ro_t _OBJC_CLASS_RO_$_DMBlock1 __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	0, sizeof(struct DMBlock1_IMPL), sizeof(struct DMBlock1_IMPL), 
+static struct _class_ro_t _OBJC_CLASS_RO_$_DMBlock5 __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, sizeof(struct DMBlock5_IMPL), sizeof(struct DMBlock5_IMPL), 
 	(unsigned int)0, 
 	0, 
-	"DMBlock1",
-	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_DMBlock1,
+	"DMBlock5",
+	0, 
 	0, 
 	0, 
 	0, 
@@ -97930,36 +97918,36 @@ static struct _class_ro_t _OBJC_CLASS_RO_$_DMBlock1 __attribute__ ((used, sectio
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_DMBlock1 __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_DMBlock5 __attribute__ ((used, section ("__DATA,__objc_data"))) = {
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_METACLASS_RO_$_DMBlock1,
+	&_OBJC_METACLASS_RO_$_DMBlock5,
 };
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_DMBlock1 __attribute__ ((used, section ("__DATA,__objc_data"))) = {
-	0, // &OBJC_METACLASS_$_DMBlock1,
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_DMBlock5 __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_DMBlock5,
 	0, // &OBJC_CLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_CLASS_RO_$_DMBlock1,
+	&_OBJC_CLASS_RO_$_DMBlock5,
 };
-static void OBJC_CLASS_SETUP_$_DMBlock1(void ) {
-	OBJC_METACLASS_$_DMBlock1.isa = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_DMBlock1.superclass = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_DMBlock1.cache = &_objc_empty_cache;
-	OBJC_CLASS_$_DMBlock1.isa = &OBJC_METACLASS_$_DMBlock1;
-	OBJC_CLASS_$_DMBlock1.superclass = &OBJC_CLASS_$_NSObject;
-	OBJC_CLASS_$_DMBlock1.cache = &_objc_empty_cache;
+static void OBJC_CLASS_SETUP_$_DMBlock5(void ) {
+	OBJC_METACLASS_$_DMBlock5.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_DMBlock5.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_DMBlock5.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_DMBlock5.isa = &OBJC_METACLASS_$_DMBlock5;
+	OBJC_CLASS_$_DMBlock5.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_DMBlock5.cache = &_objc_empty_cache;
 }
 #pragma section(".objc_inithooks$B", long, read, write)
 __declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
-	(void *)&OBJC_CLASS_SETUP_$_DMBlock1,
+	(void *)&OBJC_CLASS_SETUP_$_DMBlock5,
 };
 static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
-	&OBJC_CLASS_$_DMBlock1,
+	&OBJC_CLASS_$_DMBlock5,
 };
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

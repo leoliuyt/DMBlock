@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DMBlock.h"
+#import "DMBlock3.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,11 @@
 //    [[DMBlock new] dm_methodD];
 //    [[DMBlock new] dm_methodE];
 //    [[DMBlock new] dm_methodF];
-    [[DMBlock new] dm_methodG];
+//    [[DMBlock new] dm_methodG];
+//    [[DMBlock new] dm_methodH];
+    
+//    [[DMBlock3 new] dm_method];
+    [[DMBlock new] dm_methodK];
 }
 
 
