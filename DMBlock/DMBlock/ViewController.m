@@ -28,7 +28,8 @@
 //    [[DMBlock new] dm_methodH];
     
 //    [[DMBlock3 new] dm_method];
-    [[DMBlock new] dm_methodK];
+//    [[DMBlock new] dm_methodK];
+    [[DMBlock new] dm_methodI];
 }
 
 

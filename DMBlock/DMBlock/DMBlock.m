@@ -216,9 +216,26 @@ static int static_global_var = 5;
 - (id)getBlockArray
 {
     int val = 10;
+    
+    typedef void(^blk_t)(void);
+    
+//    NSLog(@"aaa:%@",[[[NSArray alloc] initWithObjects:
+//                  ^{NSLog(@"block0:%tu",val);},
+//                  ^{NSLog(@"block1:%tu",val);}, nil] objectAtIndex:0]);
+//    return [[NSArray alloc] initWithObjects:
+//            ^{NSLog(@"block0:%tu",val);},
+//            ^{NSLog(@"block1:%tu",val);}, nil];
+    
+    blk_t a = ^(){
+       NSLog(@"block0:%tu",val);
+    };
+
+    blk_t b = ^(){
+        NSLog(@"block0:%tu",val);
+    };
     return [[NSArray alloc] initWithObjects:
-            ^{NSLog(@"block0:%tu",val);},
-            ^{NSLog(@"block1:%tu",val);}, nil];
+            a,
+            b, nil];
 }
 
 
